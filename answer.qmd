@@ -1,0 +1,22 @@
+---
+title: "Answering a Question"
+format: html
+execute: 
+  echo: false
+---
+
+The purpose of this document is to answer a question about the pa package. See the other files in the repo for the orignal file and the associated data.
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(pa)
+library(readxl)
+```
+
+
+```{r}
+x <- read_excel("Sample.xlsx")
+```
+
