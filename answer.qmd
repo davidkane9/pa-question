@@ -13,10 +13,25 @@ The purpose of this document is to answer a question about the pa package. See t
 library(tidyverse)
 library(pa)
 library(readxl)
+library(janitor)
 ```
 
 
 ```{r}
-x <- read_excel("Sample.xlsx")
+#| message: false
+
+# The raw file is a bit of a mess. Ignore that for now.
+
+x <- read_excel("Sample.xlsx", skip = 1) |> 
+  clean_names()
 ```
+
+Data is a bit of a mess.
+
+```{r}
+summary(x)
+```
+
+But, an appropriate call to `brinson()` should work now.
+
 
